@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import Home from './Pages/Home';
 import Starred from './Pages/Starred';
 import Show from './Pages/Show';
+import Contact from './Pages/Contact';
 
 const theme = {
   mainColors: {
@@ -14,8 +15,13 @@ const theme = {
   },
 };
 
+// const onContact = () => {
+  
+// }
+
 function App() {
   return (
+    
     <ThemeProvider theme={theme}>
       <Switch>
         <Route exact path="/">
@@ -30,11 +36,21 @@ function App() {
           <Show />
         </Route>
 
+        <Route exact path="/contact">
+        <Contact/>
+        </Route>
+
+
         <Route>
           <div>404 error page not found</div>
         </Route>
+
+        
+       
       </Switch>
+      <Contact/>
     </ThemeProvider>
+    
   );
 }
 
